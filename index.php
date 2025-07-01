@@ -10,10 +10,21 @@
 
 <body>
     <div class="container">
-        
-        <h1 class="mb-4">User List
-            <button type="button" class="btn btn-primary mx-5">create account</button>
-        </h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">User Management</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">View Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Create User</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <h3 class="m-2">User List</h3>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -29,8 +40,8 @@
                     <td>wilber</td>
                     <td>088788999</td>
                     <td>
-                        <a href="" class="btn btn-primary">edit</a>
-                        <a href="" class="btn btn-danger">delete</a>
+                        <a href="" class="btn btn-primary btn-sm">edit</a>
+                        <a href="" class="btn btn-danger btn-sm">delete</a>
                     </td>
                 </tr>
             </tbody>
