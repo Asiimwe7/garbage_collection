@@ -10,21 +10,21 @@
 
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">User Management</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">View Users</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Create User</a>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">User Management</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="index.php">Users List</a>
+                    <a class="nav-link" href="add-user.php">Add User</a>
+                </div>
+                </div>
             </div>
         </nav>
-
-        <h3 class="m-2">User List</h3>
+        <h3>Users List</h3>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -36,12 +36,12 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>wilber</td>
-                    <td>088788999</td>
+                    <td>8</td>
+                    <td>Wilber</td>
+                    <td>1234567890</td>
                     <td>
-                        <a href="" class="btn btn-primary btn-sm">edit</a>
-                        <a href="" class="btn btn-danger btn-sm">delete</a>
+                        <a href="" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
             </tbody>
