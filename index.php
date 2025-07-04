@@ -10,20 +10,11 @@
 
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">User Management</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="index.php">Users List</a>
-                    <a class="nav-link" href="add-user.php">Add User</a>
-                </div>
-                </div>
-            </div>
-        </nav>
+        <?php 
+            require_once('inc/menu.php');
+            require_once("inc/db_connection.php");
+        ?>
+
         <h3>Users List</h3>
         <table class="table table-bordered">
             <thead>

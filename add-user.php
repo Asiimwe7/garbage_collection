@@ -10,49 +10,11 @@
 
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">User Management</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="index.php">Users List</a>
-                    <a class="nav-link" href="add-user.php">Add User</a>
-                </div>
-                </div>
-            </div>
-        </nav>
-        <h3>Add User</h3>
-        <?php
-        // displaying sample post data
-        // var_dump($_POST);
-        if(isset($_POST) &&isset($_POST['submit'])){
-            $username=$_POST['username'];
-            $email=$_POST['email'];
-            $password=$_POST['password'];
-            $gender=$_POST['gender'];
-            $phone=$_POST['telephone'];
-            $password=md5($password);
-            $sql="INSERT INTO user (username,password,phone,email,gender) VALUES ('$username','$password','$phone','$email','$gender');";
-            
-            $conn=mysqli_connect('localhost','root','','garbage_collection');
-            if($conn){
-                $insertQuery=mysqli_query($conn,$sql);
-                if($insertQuery){
-                    echo'Submitted successfully';
-                }
-                else{
-                    echo mysqli_error($conn);
-                }
-            }
-            else{
-                echo mysqli_connect_error($conn);
-            }
-        }
+        <?php 
+        require_once('inc/menu.php');
         ?>
-
+        <h3>Add User</h3>
+        
         <form action="" method="post">
             <div class="form-group">
                 <label for="">Email</label>
