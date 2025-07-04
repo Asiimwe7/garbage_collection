@@ -13,6 +13,9 @@
         <?php 
             require_once('inc/menu.php');
             require_once("inc/db_connection.php");
+            $query="SELECT * FROM user";
+            $users=mysqli_query($conn,$query);
+            
         ?>
 
         <h3>Users List</h3>
@@ -26,15 +29,23 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>8</td>
-                    <td>Wilber</td>
-                    <td>1234567890</td>
-                    <td>
-                        <a href="" class="btn btn-primary btn-sm">Edit</a>
-                        <a href="" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
+                <?php
+                if($users && mysqli_num_rows($users)>0){
+                    while($row=mysqli_fetch_assoc($users)){ ?>
+                    <tr>
+                        <td><?php echo $row['id'];?></td>
+                        <td><?php echo $row['username']?></td>
+                        <td><?php echo $row['phone']?></td>
+                        <td>
+                            <a href="" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                    <?php }
+                }
+                ?>
+
+                
             </tbody>
         </table>
     </div>
